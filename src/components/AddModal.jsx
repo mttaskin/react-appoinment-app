@@ -7,9 +7,16 @@ export function AddModal({ show, handleClose, drName, appointments, setAppointme
     const [patientName, setPatientName] = useState("")
     const [date, setDate] = useState("")
     console.log(patientName,date)
+
 const handleSubmit=(e)=>{
     e.preventDefault()
+    setAppointments([...appointments,{
+        id:appointments.length+1,
+        patient:patientName,
+        consulted:false,
+        doctor:drName,
 
+    },])
     handleClose()
 }
 
