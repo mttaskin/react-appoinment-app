@@ -9,10 +9,11 @@ const [doctors, setDoctors] = useState(doctorData)
 const [appointments, setAppointments] = useState(appointmentData)
 
   return (
-    <main className="text-center mt-2 vh-100">
-      <h1 className="display-5 text-danger">CLARUS HOSPITAL</h1>
+    <main className="text-center mt-2">
+      <h1 className="display-5 text-danger">MTT HOSPITAL</h1>
       <Doctors 
       doctor={doctors} 
+      setDoctor={setDoctors} 
       appoinments={appointments} 
       setAppoinments={setAppointments} />
       <AppointmentList 

@@ -15,9 +15,12 @@ export function AddModal({
 
 const handleSubmit=(e)=>{
     e.preventDefault()
-    setAppointments([...appointments,{
+    setAppointments([
+        ...appointments,
+        {
         id:appointments.length+1,
         patient:patientName,
+        day:date,
         consulted:false,
         doctor:drName,
 
@@ -43,7 +46,8 @@ const handleSubmit=(e)=>{
 
             <Form.Group className="mb-3" controlId="datetime">
               <Form.Label>Day&Time</Form.Label>
-              <Form.Control type="datetime-local"
+              <Form.Control 
+              type="datetime-local"
               onChange={(e) => setDate(e.target.value)} />
             </Form.Group>
 
