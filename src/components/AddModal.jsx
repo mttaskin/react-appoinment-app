@@ -22,8 +22,10 @@ const handleSubmit=(e)=>{
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="name">
               <Form.Label>Patient Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter your name"
-              onChangeCapture={(e)=> setPatientName(e.target.value)} />
+              <Form.Control 
+              type="text" 
+              placeholder="Enter your name"
+              onChange={(e)=> setPatientName(e.target.value)} />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="datetime">

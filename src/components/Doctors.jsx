@@ -22,8 +22,10 @@ const Doctors = ({doctors}) => {
       <Row className="justify-content-center">
         {Doctors.map((dr)=>(
           <Col key={dr.id} xs={6} sm={4} md={3} >
-            <img src={dr.img} alt={dr.name} className="img-thumbnail doctor-img" 
-            onClickP={()=>handleClick(dr.name)} />
+            <img src={dr.img} 
+            alt={dr.name} 
+            className="img-thumbnail doctor-img" 
+            onClick={()=>handleClick(dr.name)} />
             <h5>{dr.name}</h5>
             <h6>{dr.dep}</h6>
         </Col>
@@ -31,7 +33,8 @@ const Doctors = ({doctors}) => {
         
 
       </Row>
-      <AddModal show={show} 
+      <AddModal 
+      show={show} 
       handleClose={()=> setShow(false)} 
       drName={selectedDrName}/>
     </Container>
