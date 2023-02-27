@@ -44,7 +44,7 @@ const Doctors = ({ doctors, appointments, setAppointments }) => {
         setAppointments={setAppointments}
       />
     </Container>
-  );
+  )
 };
 
 export default Doctors;

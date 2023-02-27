@@ -21,7 +21,8 @@ const AppointmentList = ({ appointments, setAppointments }) => {
         Appointment List
       </h3>
       <div type="button" className="d-flex flex-column align-items-center">
-        {!appointments.length < 1 && <img src="./img/appointment.jpg" alt="" />}
+        {!appointments.length && 
+        (<img src="./img/appointment.jpg" width="80%" alt="" />)}
 
         {appointments.map((item) => {
           const { id, patient, consulted, doctor, day } = item;
@@ -37,8 +38,8 @@ const AppointmentList = ({ appointments, setAppointments }) => {
                   <h5>{doctor}</h5>
                 </Col>
                 <Col xs={10} sm={8} md={5}>
-                  <h6>{new Date(day).toLocaleDateString()}</h6>
-                  <h6>{new Date(day).toLocaleTimeString()}</h6>
+                  <h5>Date:{new Date(day).toLocaleDateString()}</h5>
+                  <h6>Time:{new Date(day).toLocaleTimeString()}</h6>
                 </Col>
                 <Col xs={2} sm={4} md={1} className="text-end">
                   <FaTimesCircle
