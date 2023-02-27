@@ -15,7 +15,9 @@ const [appointments, setAppointments] = useState(appointmentData)
       doctor={doctors} 
       appoinments={appointments} 
       setAppoinments={setAppointments} />
-      <AppointmentList />
+      <AppointmentList 
+      appoinments={appointments}
+      setAppoinments={setAppointments}/>
     </main>
   )
 }
