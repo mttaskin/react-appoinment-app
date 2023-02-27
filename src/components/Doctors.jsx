@@ -16,13 +16,14 @@ const Doctors = ({ doctors, appointments, setAppointments }) => {
     setSelectedDrName(drName);
   };
 
+
   return (
     <Container className="p-2">
       <h3 className="display-6 mb-3" style={{ color: "rgb(166,18,189)" }}>
         Our Doctors
       </h3>
       <Row className="justify-content-center">
-        {Doctors.map((dr) => (
+        {doctors.map((dr) => (
           <Col key={dr.id} xs={6} sm={4} md={3}>
             <img
               src={dr.img}
