@@ -15,7 +15,7 @@ const Doctors = ({ doctors, appointments, setAppointments }) => {
     setShow(true);
     setSelectedDrName(drName);
   };
-
+// console.log(doctors)
 
   return (
     <Container className="p-2">

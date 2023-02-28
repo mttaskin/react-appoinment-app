@@ -7,18 +7,18 @@ import { appointmentData } from "../helper/data"
 const Home = () => {
 const [doctors, setDoctors] = useState(doctorData)
 const [appointments, setAppointments] = useState(appointmentData)
-
+console.log(appointmentData)
   return (
     <main className="text-center mt-2">
       <h1 className="display-5 text-danger">MTT HOSPITAL</h1>
       <Doctors 
-      doctor={doctors} 
-      setDoctor={setDoctors} 
-      appoinments={appointments} 
-      setAppoinments={setAppointments} />
+      doctors={doctors} 
+      setDoctors={setDoctors} 
+      appointments={appointments} 
+      setAppointments={setAppointments} />
       <AppointmentList 
-      appoinments={appointments}
-      setAppoinments={setAppointments}/>
+      appointments={appointments}
+      setAppointments={setAppointments}/>
     </main>
   )
 }

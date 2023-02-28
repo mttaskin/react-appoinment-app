@@ -6,7 +6,8 @@ import Form from "react-bootstrap/Form"
 export function AddModal({ 
     show, 
     handleClose, 
-    drName, appointments, 
+    drName, 
+    appointments, 
     setAppointments,
  }) {
     const [patientName, setPatientName] = useState("")
