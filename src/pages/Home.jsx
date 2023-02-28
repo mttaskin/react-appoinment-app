@@ -14,7 +14,7 @@ console.log(appointmentData)
       <Doctors 
       doctors={doctors} 
       setDoctors={setDoctors} 
-      appointments={appointments} 
+      appointments={appointments}   
       setAppointments={setAppointments} />
       <AppointmentList 
       appointments={appointments}
